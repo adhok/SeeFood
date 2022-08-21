@@ -8,7 +8,7 @@ This is a Streamlit based application that provides basic information about Desi
 
 ### Data
 
-This uses the Indian Food Image Dataset that consists of 80 categories that can be found on Kaggle(https://www.kaggle.com/datasets/iamsouravbanerjee/indian-food-images-dataset). Apart from the images that are already present, we have also augmented the dataset using different transformations (rotation, channel shift, vertical & horizontal flip , shearing). 90% of the data was used for training, while 10% was used for validation.
+This uses the Indian Food Image Dataset that consists of 80 categories that can be found on Kaggle(https://www.kaggle.com/datasets/iamsouravbanerjee/indian-food-images-dataset). Apart from the images that are already present, we have also augmented the dataset using different transformations (rotation, channel shift, vertical & horizontal flip , shearing). You can recreate this by running the code ```python augment.py``` on your terminal. 90% of the data was used for training, while 10% was used for validation.
 
 ### Modeling Procedure
 
@@ -19,4 +19,9 @@ This uses the Indian Food Image Dataset that consists of 80 categories that can 
 3. We use Adam optimizer with a learning rate of 0.003
 
 4. The model weights are then automatically stored in the file `training_1/cp.ckpt`.
+
+5. The training can be done by running the command ```python train.py```
+
+
+
 
