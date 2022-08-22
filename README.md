@@ -22,6 +22,15 @@ This uses the Indian Food Image Dataset that consists of 80 categories that can 
 
 5. The training can be done by running the command ```python train.py```
 
+## The other Python Files and what they mean
+
+1. ```streamlit_app.py``` -> This contains the front end function of the app, such as layout , text color and the drag and drop functionality. The app can be invoked using the command ```streamlit run streamlit_app.py```.
+
+2. ```data_prep_for_prediction.py``` -> This contains the code that maps all 80 types of Indian Food to its prep time, region of origin and ingredients.
+
+3. ```inference.py``` -> This uses the model weights file created in the folder ```training_1/``` and outputs the desired results(Food Type, Region of Origin, Prep time and Ingredients)  based on the input image.
+
+
 
 
 
