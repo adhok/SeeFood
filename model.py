@@ -71,7 +71,7 @@ def model_def():
 
     model.add(keras.layers.Flatten())
 
-    model.add(keras.layers.Dense(80, activation = 'softmax'))
+    model.add(keras.layers.Dense(85, activation = 'softmax'))
 
     model.build()
     model.summary()
