@@ -89,10 +89,11 @@ def infer(img):
         
     
     
+    top_three_values_prediction = sorted(predicted_vector_list,reverse=True)[:3]
     
     
     
-    return(list_of_predictions,list_of_prep_times,list_of_regions,list_of_ingredients)
+    return(list_of_predictions,list_of_prep_times,list_of_regions,list_of_ingredients,top_three_values_prediction)
 
 
     
