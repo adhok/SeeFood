@@ -59,18 +59,32 @@ with col2:
         img = load_image(uploadFile)
         st.image(img)
         
-        list_of_predictions,list_of_prep_times,list_of_regions,list_of_ingredients = infer(uploadFile)
+        list_of_predictions,list_of_prep_times,list_of_regions,list_of_ingredients,pred_prob = infer(uploadFile)
+        
+        #print(pred_prob)
         
         list_of_predictions = [i.replace('_',' ') for i in list_of_predictions]
         
         st.write('The most likely foods are as follows 👇')
         
-        st.write('* This is ', list_of_predictions[0],". It takes ",list_of_prep_times[0],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[0], ' India.', 'The main ingredients are ',list_of_ingredients[0] ,' .')
+        if pred_prob[0] > 0.05:
         
-        st.write('* This is ',list_of_predictions[1],". It takes ",list_of_prep_times[1],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[1], ' India.','The main ingredients are ',list_of_ingredients[1] ,' .')
+            st.write('* This is ', list_of_predictions[0],". It takes ",list_of_prep_times[0],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[0], ' India.', 'The main ingredients are ',list_of_ingredients[0] ,' .')
         
-        st.write('* This is ',list_of_predictions[2],". It takes ",list_of_prep_times[2],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[2], ' India.','The main ingredients are ',list_of_ingredients[2] ,' .')
+        if pred_prob[1] > 0.05:
+
+            st.write('* This is ',list_of_predictions[1],". It takes ",list_of_prep_times[1],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[1], ' India.','The main ingredients are ',list_of_ingredients[1] ,' .')
         
+        if pred_prob[2] > 0.05:
+
+            st.write('* This is ',list_of_predictions[2],". It takes ",list_of_prep_times[2],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[2], ' India.','The main ingredients are ',list_of_ingredients[2] ,' .')
+            
+        if pred_prob[0] <=0.05 and pred_prob[1] <= 0.05 and pred_pred[2]<=0.05:
+            
+            st.write('* This food item is not present in the dataset...')
+            
+            
+
         
         
         
