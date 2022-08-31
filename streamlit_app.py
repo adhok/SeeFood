@@ -79,7 +79,7 @@ with col2:
 
             st.write('* This is ',list_of_predictions[2],". It takes ",list_of_prep_times[2],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[2], ' India.','The main ingredients are ',list_of_ingredients[2] ,' .')
 
-        if pred_prob[0] <= 0.3 and pred_prob[1] <= 0.3 and pred_pred[2] <= 0.3:
+        if pred_prob[0] <= 0.3 and pred_prob[1] <= 0.3 and pred_prob[2] <= 0.3:
 
             st.write('* This food item is not present in the dataset...')
 
