@@ -4,6 +4,7 @@ import pandas as pd
 #import pydeck as pdk
 from PIL import Image
 from inference import infer
+import time
 
 
 
