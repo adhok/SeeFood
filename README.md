@@ -15,9 +15,9 @@ This uses the Indian Food Image Dataset that consists of 85 categories that can 
 1. The pixels of each image are normalized to be in the range 0-1, by dividing the images by 255.
 
 2. These normalized images are split into batches of 128 and fed into a pre-trained EfficientNetV2 Network, where we train the model for 75 epochs.
-  * The first 25 epochs were trained with only the last layer unfrozen
-  * The second 25 epochs were trained with the last two layers unfrozen
-  * The last 25 epochs were trained with the last three layers unfrozen
+     * The first 25 epochs were trained with only the last layer unfrozen
+     * The second 25 epochs were trained with the last two layers unfrozen
+     * The last 25 epochs were trained with the last three layers unfrozen
 
 3. We use Adam optimizer with a learning rate of 0.003
 
