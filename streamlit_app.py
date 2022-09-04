@@ -59,9 +59,10 @@ with col2:
         img = load_image(uploadFile)
         st.image(img)
 
+
+
         list_of_predictions,list_of_prep_times,list_of_regions,list_of_ingredients,pred_prob = infer(uploadFile)
 
-        st.spinner(text="In progress...")
 
 
         list_of_predictions = [i.replace('_',' ') for i in list_of_predictions]
