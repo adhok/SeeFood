@@ -61,9 +61,8 @@ with col2:
 
         list_of_predictions,list_of_prep_times,list_of_regions,list_of_ingredients,pred_prob = infer(uploadFile)
 
+        st.spinner(text="In progress...")
 
-
-        print(pred_prob)
 
         list_of_predictions = [i.replace('_',' ') for i in list_of_predictions]
 
