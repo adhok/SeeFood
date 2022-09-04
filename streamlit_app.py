@@ -57,11 +57,15 @@ with col2:
 
 
         img = load_image(uploadFile)
-        st.image(img)
 
 
+        with st.spinner('Wait for it...'):
 
-        list_of_predictions,list_of_prep_times,list_of_regions,list_of_ingredients,pred_prob = infer(uploadFile)
+            list_of_predictions,list_of_prep_times,list_of_regions,list_of_ingredients,pred_prob = infer(uploadFile)
+            st.image(img)
+            time.sleep(1)
+
+
 
 
 
