@@ -8,7 +8,13 @@ import tensorflow as tf
 
 from tensorflow import keras
 
+
 model = model_def()
+
+# for layer in base_model.layers:
+#     layer.trainable = False
+
+
 
 datagen = ImageDataGenerator(rescale = 1/255., validation_split = 0.1)
 batch_size = 128
@@ -30,6 +36,10 @@ with open("class_mappings.json", "w") as fp:
 
 model.load_weights("training_1/cp.ckpt")
 
+
+
+
+
 # print(val_data.class_indices)
 
 # print(val_data.class_indices == train_data.class_indices)
@@ -45,11 +55,11 @@ checkpoint_dir = os.path.dirname(checkpoint_path)
 cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
                                                  save_weights_only=True,
                                                  verbose=1)
+# keras.optimizers.Adam(learning_rate=0.0003)
 
+model.compile(loss = keras.losses.SparseCategoricalCrossentropy(),optimizer=keras.optimizers.Adam(learning_rate = 0.0003),metrics = [tf.keras.metrics.SparseCategoricalAccuracy()])
 
-model.compile(loss = keras.losses.SparseCategoricalCrossentropy(),optimizer=keras.optimizers.Adam(learning_rate=0.0003),metrics = [tf.keras.metrics.SparseCategoricalAccuracy()])
-
-history = model.fit(train_data,epochs = 10,validation_data = val_data,callbacks=[cp_callback])
+history = model.fit(train_data,epochs = 25,validation_data = val_data,callbacks=[cp_callback])
 
 
 

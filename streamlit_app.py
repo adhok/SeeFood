@@ -7,14 +7,14 @@ from inference import infer
 
 
 
-#### Inference function that outputs  dish names, the places of origin and ingredients
+#### Inference function that outputs  dish names, the places of origin and ingredients 
 
 # Function to Read and Manupilate Images
 
 
 
 
-st.set_page_config(page_icon="", page_title="SeeFood")
+st.set_page_config(page_icon="", page_title="SeeFood",layout = 'wide')
 
 
 
@@ -24,7 +24,7 @@ st.set_page_config(page_icon="", page_title="SeeFood")
 
 st.markdown("<h1 style='text-align: center; color: orange;'>SeeFood (🇮🇳 Desi Food Edition)</h1>", unsafe_allow_html=True)
 
-st.markdown("<h4 style='text-align: center; color: orange;'>A MobileNet neural network trained to recognize 80 types of Indian Food using the data found <a href = 'https://www.kaggle.com/datasets/iamsouravbanerjee/indian-food-images-dataset'> here. </a> </h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: orange;'>A EfficientNetV2 neural network trained to recognize 85 types of Indian Food using the data found <a href = 'https://www.kaggle.com/datasets/iamsouravbanerjee/indian-food-images-dataset'> here. </a> </h4>", unsafe_allow_html=True)
 
 st.markdown("<h4 style='text-align: center; color: orange;'>We present the top three predictions and display their ingredients and region of origin.</h4>", unsafe_allow_html=True)
 
@@ -50,7 +50,7 @@ uploadFile = st.file_uploader(label="Upload image", type=['jpg', 'png','jpeg'])
 
 
 with col2:
-
+    
 
 
     if uploadFile is not None:
@@ -58,36 +58,38 @@ with col2:
 
         img = load_image(uploadFile)
         st.image(img)
-
+        
         list_of_predictions,list_of_prep_times,list_of_regions,list_of_ingredients,pred_prob = infer(uploadFile)
-
-        #print(pred_prob)
-
+        
+        
+        
+        print(pred_prob)
+        
         list_of_predictions = [i.replace('_',' ') for i in list_of_predictions]
-
+        
         st.write('The most likely foods are as follows 👇')
-
-        if pred_prob[0] > 0.3:
-
+        
+        if pred_prob[0] > 0.2:
+        
             st.write('* This is ', list_of_predictions[0],". It takes ",list_of_prep_times[0],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[0], ' India.', 'The main ingredients are ',list_of_ingredients[0] ,' .')
-
-        if pred_prob[1] > 0.3:
+        
+        if pred_prob[1] > 0.2 :
 
             st.write('* This is ',list_of_predictions[1],". It takes ",list_of_prep_times[1],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[1], ' India.','The main ingredients are ',list_of_ingredients[1] ,' .')
-
-        if pred_prob[2] > 0.3:
+        
+        if pred_prob[2] > 0.2:
 
             st.write('* This is ',list_of_predictions[2],". It takes ",list_of_prep_times[2],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[2], ' India.','The main ingredients are ',list_of_ingredients[2] ,' .')
-
-        if pred_prob[0] <= 0.3 and pred_prob[1] <= 0.3 and pred_prob[2] <= 0.3:
-
+            
+        if pred_prob[0] <= 0.2 and pred_prob[1] <= 0.2 and pred_prob[2]<=0.2 :
+            
             st.write('* This food item is not present in the dataset...')
+            
+            
 
-
-
-
-
-
+        
+        
+        
         st.write("Image Uploaded Successfully")
 
     else:
@@ -95,17 +97,17 @@ with col2:
 
 
 # with col3:
-#     st.write(' ')
+#     st.write(' ')  
+    
+    
+    
 
 
 
 
 
 
-
-
-
-
+    
 
 
 
@@ -141,7 +143,7 @@ with col2:
 #              get_position='[lon, lat]',
 #              get_color='[100, 150, 0, 1]',
 #              get_radius=50000,
-
+             
 #          ),
 #      ],
 #  ))

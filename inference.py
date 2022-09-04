@@ -31,6 +31,8 @@ def infer(img):
     model.load_weights("training_1/cp.ckpt")
 
     predicted_vector = model.predict(img)
+    
+    print(predicted_vector.shape)
 
     ## Convert the vector to list
 
@@ -49,6 +51,8 @@ def infer(img):
 
 
     top_three = sort_index(predicted_vector_list)[:3]
+    
+    print(top_three)
     with open('class_mappings.json') as json_file:
         data = json.load(json_file)
 
