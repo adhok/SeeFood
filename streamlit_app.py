@@ -83,19 +83,19 @@ with col2:
 
         st.write('The most likely foods are as follows 👇')
 
-        if pred_prob[0] > 0.2:
+        if pred_prob[0] > 0.1:
 
             st.write('* This is ', list_of_predictions[0],". It takes ",list_of_prep_times[0],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[0], ' India.', 'The main ingredients are ',list_of_ingredients[0] ,' .')
 
-        if pred_prob[1] > 0.2 :
+        if pred_prob[1] > 0.1 :
 
             st.write('* This is ',list_of_predictions[1],". It takes ",list_of_prep_times[1],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[1], ' India.','The main ingredients are ',list_of_ingredients[1] ,' .')
 
-        if pred_prob[2] > 0.2:
+        if pred_prob[2] > 0.1:
 
             st.write('* This is ',list_of_predictions[2],". It takes ",list_of_prep_times[2],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[2], ' India.','The main ingredients are ',list_of_ingredients[2] ,' .')
 
-        if pred_prob[0] <= 0.2 and pred_prob[1] <= 0.2 and pred_prob[2]<=0.2 :
+        if pred_prob[0] <= 0.1 and pred_prob[1] <= 0.1 and pred_prob[2]<=0.1 :
 
             st.write('* This food item is not present in the dataset...')
 
