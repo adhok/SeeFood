@@ -36,7 +36,7 @@ st.markdown("<h1 style='text-align: center; color: orange;'>Khana Dekho (ðŸ‡®ðŸ‡
 
 st.markdown("<h4 style='text-align: center; color: orange;'>A EfficientNetV2 neural network trained to recognize 85 types of Indian Food using the data found <a href = 'https://www.kaggle.com/datasets/iamsouravbanerjee/indian-food-images-dataset'> here. </a> </h4>", unsafe_allow_html=True)
 
-st.markdown("<h4 style='text-align: center; color: orange;'>We present the top three predictions and display their ingredients and region of origin.</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: orange;'>We present the top five predictions and display their ingredients and region of origin.</h4>", unsafe_allow_html=True)
 
 
 col1, col2, col3 = st.columns([1,18,1])
