@@ -50,7 +50,7 @@ def infer(img):
         return s
 
 
-    top_three = sort_index(predicted_vector_list)[:3]
+    top_three = sort_index(predicted_vector_list)[:5]
 
     print(top_three)
     with open('class_mappings.json') as json_file:
@@ -93,7 +93,7 @@ def infer(img):
 
 
 
-    top_three_values_prediction = sorted(predicted_vector_list,reverse=True)[:3]
+    top_three_values_prediction = sorted(predicted_vector_list,reverse=True)[:5]
 
 
 
