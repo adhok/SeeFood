@@ -10,12 +10,11 @@ import time
 
 #### Inference function that outputs  dish names, the places of origin and ingredients
 
-# Function to Read and Manupilate Images
 
 
 
 
-st.set_page_config(page_icon="", page_title="SeeFood")
+st.set_page_config(page_icon="", page_title="Khana Dekho")
 
 # page_bg_img = '''
 # <style>
@@ -29,24 +28,21 @@ st.set_page_config(page_icon="", page_title="SeeFood")
 # st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://cdn.pixabay.com/photo/2019/04/24/11/27/flowers-4151900_960_720.jpg");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-    <style>
-        .stApp {
-          background-image: url("data:image/png;base64,%s");
-          background-size: cover;
-            }
-</style>
-    ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-set_background('https://raw.githubusercontent.com/adhok/SeeFood/main/luxury-ornamental-mandala-design-background_1159-6794.jpg')
+add_bg_from_url() 
 
 
 
