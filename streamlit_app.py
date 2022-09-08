@@ -33,7 +33,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://www.pngfind.com/pngs/m/272-2723575_view-full-size-indian-design-border-png-transparent.png");
+             background-image: url(https://raw.githubusercontent.com/adhok/SeeFood/main/luxury-ornamental-mandala-design-background_1159-6794.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
@@ -102,8 +102,14 @@ with col2:
         st.markdown("<p style='text-align: center; color: white;'>The most likely foods are as follows 👇.</p>", unsafe_allow_html=True)
 
         if pred_prob[0] > 0.0:
+            
+            
+            st.markdown("""
+  #### "<span style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</span> "   
+""".format(list_of_predictions[0],list_of_prep_times[0],list_of_regions[0],list_of_ingredients[0]),  unsafe_allow_html=True)
+            
 
-            st.write('* This is ', list_of_predictions[0],". It takes ",list_of_prep_times[0],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[0], ' India.', 'The main ingredients are ',list_of_ingredients[0] ,' .')
+#             st.write('* This is ', list_of_predictions[0],". It takes ",list_of_prep_times[0],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[0], ' India.', 'The main ingredients are ',list_of_ingredients[0] ,' .')
 
         if pred_prob[1] > 0 :
 
