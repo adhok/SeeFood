@@ -33,7 +33,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://raw.githubusercontent.com/adhok/SeeFood/main/luxury-ornamental-mandala-design-background_1159-6794.jpg");
+             background-image: url("https://www.pngfind.com/pngs/m/272-2723575_view-full-size-indian-design-border-png-transparent.png");
              background-attachment: fixed;
              background-size: cover
          }}
@@ -131,6 +131,7 @@ with col2:
 
     else:
         st.write("Make sure you image is in JPG/PNG Format.")
+        
 
 
 # with col3:
