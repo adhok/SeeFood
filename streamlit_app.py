@@ -151,7 +151,7 @@ with col2:
 
 
         #st.write("Image Uploaded Successfully")
-         st.markdown("<p style='text-align: center; color: white;'>Image Uploaded Successfully</p>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center; color: white;'>Image Uploaded Successfully</p>", unsafe_allow_html=True)
     else:
         #st.write("Make sure you image is in JPG/PNG Format.")
         
