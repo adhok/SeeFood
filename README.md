@@ -19,6 +19,8 @@ This uses the Indian Food Image Dataset that consists of 85 categories that can 
      * The second 25 epochs were trained with the last two layers unfrozen
      * The third 25 epochs were trained with the last three layers unfrozen
      * The last 25 epochs were trained with the last four layers unfrozen
+
+
    The model weights were re-used from the previous steps (E.g Model weights for the second 25 epoch run were obtained from the first 25 epoch run)
 
 3. We use Adam optimizer with a learning rate of 0.003
@@ -37,7 +39,7 @@ This uses the Indian Food Image Dataset that consists of 85 categories that can 
 
 ## Results 
 
-The train F1 score was ~90
+The train F1 score was ~90%
 
 
 
