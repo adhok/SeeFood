@@ -20,7 +20,7 @@ st.set_page_config(page_icon="", page_title="SeeFood")
 page_bg_img = '''
 <style>
 body {
-background-image: url(https://raw.githubusercontent.com/adhok/SeeFood/main/luxury-ornamental-mandala-design-background_1159-6794.jpg");
+background-image: url(https://raw.githubusercontent.com/adhok/SeeFood/main/luxury-ornamental-mandala-design-background_1159-6794");
 background-size: cover;
 }
 </style>
