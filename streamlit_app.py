@@ -105,7 +105,7 @@ with col2:
             
             
             st.markdown("""
-  #### "<p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p> "   
+  #### <p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p>  
 """.format(list_of_predictions[0],list_of_prep_times[0],list_of_regions[0],list_of_ingredients[0]),  unsafe_allow_html=True)
             
 
@@ -113,7 +113,7 @@ with col2:
 
         if pred_prob[1] > 0 :
             st.markdown("""
-  #### "<p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p> "   
+  #### <p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p>  
 """.format(list_of_predictions[1],list_of_prep_times[1],list_of_regions[1],list_of_ingredients[1]),  unsafe_allow_html=True)
 
 #             st.write('* This is ',list_of_predictions[1],". It takes ",list_of_prep_times[1],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[1], ' India.','The main ingredients are ',list_of_ingredients[1] ,' .')
@@ -121,7 +121,7 @@ with col2:
         if pred_prob[2] > 0:
         
             st.markdown("""
-  #### "<p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p> "   
+  #### <p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p>
 """.format(list_of_predictions[2],list_of_prep_times[2],list_of_regions[2],list_of_ingredients[2]),  unsafe_allow_html=True)
 
 #             st.write('* This is ',list_of_predictions[2],". It takes ",list_of_prep_times[2],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[2], ' India.','The main ingredients are ',list_of_ingredients[2] ,' .')
@@ -129,7 +129,7 @@ with col2:
         if pred_prob[3] > 0:
         
             st.markdown("""
-  #### "<p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p> "   
+  #### <p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p>
 """.format(list_of_predictions[3],list_of_prep_times[3],list_of_regions[3],list_of_ingredients[3]),  unsafe_allow_html=True)
 
 #             st.write('* This is ',list_of_predictions[3],". It takes ",list_of_prep_times[3],' minutes to prepare.',' The cuisine is based in  ',list_of_regions[3], ' India.','The main ingredients are ',list_of_ingredients[3] ,' .')
@@ -137,7 +137,7 @@ with col2:
         if pred_prob[4] > 0:
         
             st.markdown("""
-  #### "<p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p> "   
+  #### <p style="color:white">* This is {} . It takes {} minutes to prepare. The cuisine is based in {} India. The ingredients are {} .</p>  
 """.format(list_of_predictions[4],list_of_prep_times[4],list_of_regions[4],list_of_ingredients[4]),  unsafe_allow_html=True)
         
         
