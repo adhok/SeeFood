@@ -97,7 +97,9 @@ with col2:
 
         list_of_predictions = [i.replace('_',' ') for i in list_of_predictions]
 
-        st.write('The most likely foods are as follows 👇')
+        #st.write('The most likely foods are as follows 👇')
+        
+        st.markdown("<p style='text-align: center; color: white;'>The most likely foods are as follows 👇.</h4>", unsafe_allow_html=True)
 
         if pred_prob[0] > 0.0:
 
