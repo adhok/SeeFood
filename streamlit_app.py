@@ -33,7 +33,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url(https://raw.githubusercontent.com/adhok/SeeFood/main/luxury-ornamental-mandala-design-background_1159-6794.jpg");
+             background-image: url("https://raw.githubusercontent.com/adhok/SeeFood/main/luxury-ornamental-mandala-design-background_1159-6794.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
