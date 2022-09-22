@@ -1,4 +1,4 @@
-## Khana Dekho (🇮🇳 See Food)
+## Khana Dekho (🇮🇳 See Food) 🍚🍨🍢🥜
 
 
 This is a Streamlit based application that provides basic information about Indian Food (origin, ingredients &amp; preparation time). This is based on a fictional app based on the HBO series "Silicon Valley". This can be found here -> https://adhok-seefood-streamlit-app-7lw6nk.streamlitapp.com/
